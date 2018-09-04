@@ -6,10 +6,34 @@ using System.Threading.Tasks;
 
 namespace Sep_4_Bragg
 {
+    enum Color { Black, Blue, Red, NeonGreen};
+    enum VehicleType { Car, Truck, Motorcycle };
+
+    struct Vehicle
+    {
+        public VehicleType type;
+        public Color color;
+
+        public string make;
+        public string model;
+        public int year;
+    }
+
+
     class Program
     {
         static void Main(string[] args)
         {
+            var porsche924s =
+                new Vehicle
+                {
+                    type = VehicleType.Car,                            
+                    color = Color.Red,
+                    make = "Porsche",                           
+                    model = "924s",                           
+                    year = 1987};
+
+            Console.WriteLine(myFirstCarMessage(porsche924s));
         }
     }
 }
