@@ -33,7 +33,18 @@ namespace Sep_4_Bragg
                     model = "924s",                           
                     year = 1987};
 
-            Console.WriteLine(myFirstCarMessage(porsche924s));
+            Console.WriteLine(MyFirstVehicleMessage(porsche924s));
         }
+
+        private static string MyFirstVehicleMessage(Vehicle firstVehicle)
+        {
+            var msg = $"My first vehicle was a {firstVehicle.type}, specifically a " +
+                $"{ firstVehicle.color} { firstVehicle.year} " +
+                $"{firstVehicle.make} {firstVehicle.model}.";
+
+            return msg;
+            
+        }
+
     }
 }
